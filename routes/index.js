@@ -6,6 +6,7 @@ var validator = require("email-validator");
 
 
   var connectionPool =  mysql.createPool({
+    connectionLimit: 500,
   host : 'localhost',
   user : 'root',
   password: 'password',
@@ -63,12 +64,22 @@ conn.query('SELECT firstname,password,role from USERS where username=?',username
     else{
   	if(rows[0].password === password) {
       var firstName = rows[0].firstname;
+
+      if(req.session && req.session.username === username){
+        console.log('User:' + username + ' already logged in. Killing session:' + req.session.sessionId);
+        req.session.regenerate();
+      }
+      console.log( req.sessionID);
       var expiryTime =  15 * 60 * 1000; 
       req.session.cookie.expires = new Date(Date.now() + expiryTime);
   		req.session.username = username;
       req.session.admin = rows[0].role;
-      console.log(' Expiration time:' + req.session.cookie.expires);
+      console.log('Req Admin' + req.session.admin);
+      console.log(' Created session:' + req.session.cookie.expires);
 		  res.send( 'Welcome ' + firstName);
+    }
+    else{
+      res.send('There seems to be an issue with the username/password combination that you entered');
     }
   } 
 }
@@ -200,7 +211,7 @@ connectionPool.getConnection(function(err,conn){
     }
     else{
       console.log('Your information has been updated');
-      if(req.body.username !== 'undefined' || req.body.username !== ''){
+      if(typeof req.body.username !== 'undefined' || req.body.username !== ''){
       req.session.username = req.body.username;
     }
       res.send('Your information has been updated');
@@ -215,8 +226,15 @@ else{
 }
 });
 
-router.post('/addProducts', validateProduct ,function(req,res,next){
+router.post('/addProducts',function(req,res,next){
+  console.log('Req session:' + req.session);
+  console.log('Req admin:' + req.session.admin);
   if(req.session && req.session.admin == 1){
+    if(req.body.productId === '' || typeof req.body.productId === 'undefined' || req.body.name === '' || typeof req.body.name ==='undefined' || req.body.productDescription === '' || typeof req.body.productDescription ==='undefined' || req.body.group === '' || typeof req.body.group ==='undefined'){
+    console.log('All parameters required');
+    res.send('There was a problem with this action');
+    return;
+  }
     var product_info = {productId: req.body.productId, name: req.body.name, productDescription: req.body.productDescription, group: req.body.group};
       connectionPool.getConnection(function(err,conn){
   if(err){
@@ -256,24 +274,42 @@ router.post('/viewProducts', function(req,res,next){
     console.log('Error in getting connection from pool');
     return;
   }
- /* if(req.body.productId=== 'undefined' || req.body.productId === ''){
-    req.body.productId = null;
+  var executer='';
+  if(typeof req.body.productId === 'undefined' && typeof req.body.group ==='undefined' && typeof req.body.productDescription === 'undefined' && typeof req.body.name ==='undefined'){
+    executer = 'select name from products';
   }
-  if(req.body.productDescription=== 'undefined' || req.body.productDescription === ''){
-    req.body.productDescription = null;
+  else{
+
+   executer = 'select name from products where ';
+   if(typeof req.body.productId !== 'undefined'){
+    //req.body.productId = null;
+    executer += 'productId = '+ conn.escape(req.body.productId)+' or';
   }
-  if(req.body.name=== 'undefined' || req.body.name === ''){
-    req.body.name = null;
-  }*/
+   if(typeof req.body.group !== 'undefined'){
+    //req.body.group = null;
+    executer += ' `group` = '+ conn.escape(req.body.group)+' or';
+  }
+  if(typeof req.body.productDescription !== 'undefined'){
+
+    var description = '%' + req.body.productDescription + '%';
+      executer += ' productDescription like '+conn.escape(description)+' or';
+  }
+  if(typeof req.body.name !== 'undefined'){
+    var productName = '%' + req.body.name + '%';
+    executer += ' name like '+conn.escape(productName)+' or';
+  }
+  executer = executer.slice(0,-2);
+  }
 conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
   if (err) console.log(err);
 });
-conn.query('select name from products where productId = ? or name like ? or productDescription like ? ', [req.body.productId,'%'+req.body.name+'%' ,'%'+req.body.productDescription+'%'], function(err,results){
+//console.log(executer);
+conn.query(executer, function(err,results){
 if(!err){
   if(results.length > 0){
     var userList = [results[0].name];
     for (var i =1 ; i < results.length; i++) {
-      userList.push(',' + results[i].name);
+      userList.push(results[i].name);
     }
     res.send(userList);
   }
@@ -283,6 +319,7 @@ if(!err){
   
 }
 else{
+  console.log(err);
   res.send('Issue while performing query');
 }
 })  
@@ -301,33 +338,24 @@ if(req.session && req.session.admin ==1){
 conn.changeUser({database : 'CREDENTIALS'}, function(err) {
   if (err) console.log(err);
 });
-
-console.log(req.body.fname+ " :blah:" + req.body.lname) ;
-if(typeof req.body.fname ==='undefined' && typeof req.body.lname === 'undefined'){
-  console.log('Inside No fname');
-conn.query('select firstname,lastname from users' , function(err,results){
-  if(!err){
-  if(results.length > 0){
-    var userList = [];
-    for (var i =0 ; i < results.length; i++) {
-      userList.push(results[i].firstname + ' ' + results[i].lastname);
-    }
-    res.send(userList);
-  }
-  else{
-    res.send('There are no users');
-    return;
-  }
+var executer = '';
+if(typeof req.body.fname === 'undefined' && typeof req.body.lname === 'undefined'){
+  executer = 'select firstname,lastname from users';
 }
 else{
-  console.log(err);
-  res.send('Issue while performing query');
+    executer = 'select firstname,lastname from users where';
+  if(typeof req.body.fname !== 'undefined'){
+    var fname = '%' + req.body.fname + '%';
+    executer += ' firstname like '+conn.escape(fname)+' or';
+  }
+   if(typeof req.body.lname !== 'undefined'){
+    var lname = '%' + req.body.lname + '%';
+    executer += ' lastname like '+conn.escape(lname)+' or';
+  }
+  executer = executer.slice(0,-2);
 }
-});
-}
-else{
-  console.log('Inside fname and lname');
-conn.query('select firstname,lastname from users where firstname like ? or lastname like ? ', ['%'+req.body.fname+'%' ,'%'+req.body.lname+'%'], function(err,results){
+console.log(executer);
+conn.query(executer,function(err,results){
 if(!err){
   if(results.length > 0){
     var userList = [];
@@ -345,10 +373,7 @@ else{
   res.send('Issue while performing query');
 }
 });
-}
-});
-
-
+})
 }
 else if(req.session && req.session.admin == 0){
   res.send('Only admin can perform this action');
@@ -391,8 +416,8 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
   if (err) console.log(err);
 });
 //var record = {name:req.body.name, productDescription: req.body.productDescription};
-console.log('Executing Update');
-conn.query('update `products` set `name` = ?, `productDescription` = ? where `productId` = ?' [req.body.name, req.body.productDescription, req.body.productId], function(err){
+console.log('Executing Update' + req.body.name + ' ' + req.body.productDescription + '  ' + req.body.productId);
+conn.query('update `products` set `name` = ?, `productDescription` = ? where `productId` = ?' ,[req.body.name, req.body.productDescription, req.body.productId], function(err){
 if(!err){
 
   res.send('The product information has been updated');
@@ -450,17 +475,13 @@ function validateRegister(req,res,next){
 }
 
 
-function validateProduct(req,res,next){
+/*function validateProduct(req,res,next){
   console.log('In validatproduct');
   console.log('Id:' + typeof req.body.productId);
-  if(req.body.productId === '' || typeof req.body.productId === 'undefined' || req.body.name === '' || typeof req.body.name ==='undefined' || req.body.productDescription === '' || typeof req.body.productDescription ==='undefined' || req.body.group === '' || typeof req.body.group ==='undefined'){
-    console.log('All parameters required');
-    res.send('There was a problem with this action');
-    return;
-  }
+  
   else{
     next();
   }
-}
+}*/
 
 module.exports = router;
