@@ -289,7 +289,7 @@ router.post('/viewProducts', function(req,res,next){
   console.log('ConnectionID:' + conn.threadId);
   var executer='';
   if(typeof req.body.productId === 'undefined' && typeof req.body.group ==='undefined' && typeof req.body.keyword === 'undefined'){
-    executer = 'select name from products';
+    executer = 'select name from PRODUCTS';
   }
   else{
 
@@ -350,7 +350,7 @@ conn.changeUser({database : 'CREDENTIALS'}, function(err) {
 });
 var executer = '';
 if(typeof req.body.fname === 'undefined' && typeof req.body.lname === 'undefined'){
-  executer = 'select firstname,lastname from users';
+  executer = 'select firstname,lastname from USERS';
 }
 else{
     executer = 'select firstname,lastname from USERS where';
