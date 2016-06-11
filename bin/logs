@@ -1,0 +1,1117 @@
+Example app listening at http://:::52541
+[0mPOST /viewProducts [32m200 [0m83.146 ms - 59[0m
+Connected to DB as :388
+FirstnameHolly
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.384 ms - 32[0m
+UserName:nonummy
+en4hEKjgPSQHvj4Od9bm9kQBVY1QwgDD
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:12 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m8.311 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m4.286 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.805 ms - 24[0m
+UserName:jadmin 
+iV5jVnwQoJO9agVKA3KssSOgJRyrXoA9
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:12 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.527 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+[0mPOST /addProducts [32m200 [0m3.118 ms - 40[0m
+[0mPOST /viewProducts [32m200 [0m4.447 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.621 ms - 23[0m
+Connected to DB as :390
+FirstnameLevi
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m3.851 ms - 32[0m
+UserName:ante
+eNBgSuWFdm3LBC_u55qJg7t5NoqFz6s9
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:13 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.993 ms - 12[0m
+[0mPOST /viewUsers [32m200 [0m0.755 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.282 ms - 24[0m
+UserName:jadmin 
+Z2ERdxghyJXwwD3OIB1o0W1FzB207X3A
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:13 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m7.407 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m6.123 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.770 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.325 ms - 23[0m
+Connected to DB as :392
+FirstnameSage
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m5.316 ms - 32[0m
+UserName:mi
+xultabIZic1hxW14-OqZ_GIL-QrtPXel
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:13 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.319 ms - 12[0m
+[0mPOST /viewUsers [32m200 [0m0.601 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.636 ms - 24[0m
+UserName:jadmin 
+9UW6IFAPD7k-xLjgpvmCgZt5J1FO5E9g
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:13 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.415 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m5.269 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m1.872 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.265 ms - 23[0m
+Connected to DB as :394
+FirstnameCiara
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m5.180 ms - 32[0m
+UserName:sem
+GtiAgf1tceT_WkC8aC4z09ZxaRWbyDw8
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:14 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.777 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m1.490 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.575 ms - 24[0m
+UserName:jadmin 
+Lsyn-GLlAjGAxJuC3aZi3-g5b-wZ2NsI
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:14 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.196 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.039 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.766 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.284 ms - 23[0m
+Connected to DB as :396
+FirstnameLaura
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m5.486 ms - 32[0m
+UserName:dolor
+iUeMorWtU-WpdKQQrpUGL5Yh6TXgsnvB
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:14 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.232 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.895 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.506 ms - 24[0m
+UserName:jadmin 
+EsqoPsuU0MskDiU662QWj1AoJouzjB1d
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:14 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.752 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.306 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m4.455 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m9.922 ms - 23[0m
+Connected to DB as :398
+FirstnameNoelle
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.892 ms - 32[0m
+UserName:tincidunt
+IWWN2-VkiLwIbec4XF3aT1i-zAtnx61z
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:15 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.562 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.653 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.428 ms - 24[0m
+UserName:jadmin 
+jjdG5FxDzk7lE6Jo7rKg2LIZTMcyq5SH
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:15 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.831 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.673 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m1.865 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.670 ms - 23[0m
+Connected to DB as :400
+FirstnameIfeoma
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.119 ms - 32[0m
+UserName:Nunc
+rT7iV5ubEwfunPYwhl3aNs9QCRmbkmF0
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:15 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.707 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.651 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.646 ms - 24[0m
+UserName:jadmin 
+wApWAn6N9AzYQSepOah-9x5PgeoOlxzr
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:15 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.028 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.418 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m3.096 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m7.946 ms - 23[0m
+Connected to DB as :402
+FirstnameBert
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m3.870 ms - 32[0m
+UserName:sed
+h8tMOhjXAcCRfI4ZerYv2GzzyG9PPRU7
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:16 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.457 ms - 12[0m
+[0mPOST /viewUsers [32m200 [0m0.856 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.540 ms - 24[0m
+UserName:jadmin 
+WI185BHn5uTpubuWdgJtRDD6pJtz_IZg
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:16 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.067 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m9.403 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.638 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.766 ms - 23[0m
+Connected to DB as :404
+FirstnameRhoda
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.886 ms - 32[0m
+UserName:cursus
+WrHA0cJK3MY7M60GUoPwHUY9sHJzVA4b
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:16 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.985 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.990 ms - 34[0m
+[0mPOST /logout [32m200 [0m5.698 ms - 24[0m
+UserName:jadmin 
+2cBg5jWqJ13DiLi6CpIU8V_zlTYTLq4h
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:16 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.858 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.635 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.157 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m7.305 ms - 23[0m
+Connected to DB as :406
+FirstnameLarissa
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.012 ms - 32[0m
+UserName:tellus
+10hKL65MPF83ypKIdn_9Pe0isDAhsxi5
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:17 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.408 ms - 15[0m
+[0mPOST /viewUsers [32m200 [0m0.844 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.591 ms - 24[0m
+UserName:jadmin 
+BuSlm1vxJD5BNDg1iwnpfk1uIBX5REy-
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:17 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.469 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.187 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m1.941 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m8.118 ms - 23[0m
+Connected to DB as :408
+FirstnameAmber
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m5.472 ms - 32[0m
+UserName:mauris.
+HXTGeBWjcNkbqe6tfjpVbSQKkI2w--ZU
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:17 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.561 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.929 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.809 ms - 24[0m
+UserName:jadmin 
+xgnloMqI0Rh6wW5SCMqI-xBkPZHZLXwv
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:17 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.815 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.403 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.188 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.611 ms - 23[0m
+Connected to DB as :410
+FirstnameAli
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.986 ms - 32[0m
+UserName:consectetuer
+L4lYhVcQAWAti8q6xhasrJ0HgxGIv076
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:18 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.098 ms - 11[0m
+[0mPOST /viewUsers [32m200 [0m1.129 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.654 ms - 24[0m
+UserName:jadmin 
+0B9BEJwiMiSc4R8DCDfQG4w9N63VRd9e
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:18 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.820 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.431 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m3.229 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.381 ms - 23[0m
+Connected to DB as :412
+FirstnameMadonna
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.736 ms - 32[0m
+UserName:amet
+mT7x82J2wykW7UW1qjisOpumDlfxt-g_
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:18 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.866 ms - 15[0m
+[0mPOST /viewUsers [32m200 [0m0.734 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.234 ms - 24[0m
+UserName:jadmin 
+PTmTPygjfc1JpRDzDVZmup4S1T2y0waY
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:18 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.854 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.872 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.197 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.344 ms - 23[0m
+Connected to DB as :414
+FirstnameCallie
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m5.703 ms - 32[0m
+UserName:luctus
+t2bEAiIJmOh998fmldPqJxDBHmoqMMnE
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:19 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.815 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m1.487 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.999 ms - 24[0m
+UserName:jadmin 
+AkzKSAidiFY38OZ18Bs9LP5jp1i9_y9D
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:19 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.399 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.680 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.842 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.905 ms - 23[0m
+Connected to DB as :416
+FirstnameWhitney
+Record:object
+Error while persisting recordError: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xEF\xBF\xBDa' for column 'state' at row 1
+[0mPOST /registerUser [32m200 [0m3.716 ms - 42[0m
+UserName:erat.
+[0mPOST /login [32m200 [0m3.174 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m0.470 ms - 44[0m
+[0mPOST /logout [32m200 [0m0.639 ms - 31[0m
+UserName:jadmin 
+NsWW9g4aF2DYux22Jz5WbJMEpXWzRwdR
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:19 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.449 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.916 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.646 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.688 ms - 23[0m
+Connected to DB as :418
+FirstnameMay
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.460 ms - 32[0m
+UserName:Duis
+nUNJYUZlmpHBbrtK5lV-ahCvmHJBczhN
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:20 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.800 ms - 11[0m
+[0mPOST /viewUsers [32m200 [0m2.581 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.705 ms - 24[0m
+UserName:jadmin 
+LgkTFHq02xK8immUgyVrjxi6xLyNc8U6
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:20 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.252 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.353 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.115 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.967 ms - 23[0m
+Connected to DB as :420
+FirstnameGiacomo
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.408 ms - 32[0m
+UserName:odio.
+XD76XIIRWl2zpDx74i5k3RfnIP3zKnhd
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:20 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m7.038 ms - 15[0m
+[0mPOST /viewUsers [32m200 [0m7.143 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.681 ms - 24[0m
+UserName:jadmin 
+A9m4e9LnDSulaq60QJnqSefW3HvPOLuA
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:20 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.922 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.732 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.350 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.360 ms - 23[0m
+Connected to DB as :422
+FirstnameJescie
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.136 ms - 32[0m
+UserName:fermentum
+OWKF9UDMlu_lRCJgP1seps28A4GGPeYv
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:21 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.767 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.754 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.694 ms - 24[0m
+UserName:jadmin 
+dVHif1cjPD-bUoxyqDRUcFIe9rx6H2Sl
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:21 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.808 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.159 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.287 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.249 ms - 23[0m
+Connected to DB as :424
+FirstnameDante
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.207 ms - 32[0m
+UserName:sagittis
+4S44R_Mha8LsU8Zb5n9vKPSAylBUvlR-
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:21 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.031 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.526 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.517 ms - 24[0m
+UserName:jadmin 
+4PUrmnIOEnickdomh4L2E0sW5PxuXlvU
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:21 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.155 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.877 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.264 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.833 ms - 23[0m
+Connected to DB as :426
+FirstnameKai
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.153 ms - 32[0m
+UserName:Donec
+yO-aQ503u9AJSk_VNZ0LEo1Lr6FMFOMM
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:22 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.001 ms - 11[0m
+[0mPOST /viewUsers [32m200 [0m0.532 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.783 ms - 24[0m
+UserName:jadmin 
+LFTB4SZ_1BdgQi_Ki0GqLdKU0d2u3xn0
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:22 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.258 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.907 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.296 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.923 ms - 23[0m
+Connected to DB as :428
+FirstnameWinifred
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.688 ms - 32[0m
+UserName:Vestibulum
+XN8DsjXhQvF7LNeh-z5pOEO19G17S5RG
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:22 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.827 ms - 16[0m
+[0mPOST /viewUsers [32m200 [0m0.773 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.712 ms - 24[0m
+UserName:jadmin 
+dnd1fO4Fe6o_GxK0mtbGifpe4aq2uemQ
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:22 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.077 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.089 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m1.982 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.259 ms - 23[0m
+Connected to DB as :430
+FirstnameJoseph
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m4.899 ms - 32[0m
+UserName:lacus.
+CFbOgiVeqIsMU6VY-WlYREMKRs0CzEbk
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:23 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m6.235 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.579 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.670 ms - 24[0m
+UserName:jadmin 
+WCAhG-tTHywDMVudWlLKUtMhfiKjQzx6
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:23 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.233 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.244 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m6.503 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.975 ms - 23[0m
+Connected to DB as :432
+FirstnameBrady
+Record:object
+Error while persisting recordError: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xEF\xBF\xBDle-...' for column 'state' at row 1
+[0mPOST /registerUser [32m200 [0m3.059 ms - 42[0m
+UserName:Donec
+[0mPOST /login [32m200 [0m3.027 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m0.472 ms - 44[0m
+[0mPOST /logout [32m200 [0m0.604 ms - 31[0m
+UserName:jadmin 
+q75ZN8EkK5HU-Q91h0b38ZJZhMU6182T
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:23 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.231 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m4.197 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.439 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.775 ms - 23[0m
+Connected to DB as :434
+FirstnameAurora
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.462 ms - 32[0m
+UserName:magna
+aLYBFBHIHNPe4ozhVxKF2hbqgHEjm167
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:24 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.032 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.684 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.672 ms - 24[0m
+UserName:jadmin 
+w2zIQP8YNjXcL5S_P8em4ScuawCeLjaG
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:24 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.951 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.299 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.266 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.651 ms - 23[0m
+Connected to DB as :436
+FirstnameAriel
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.029 ms - 32[0m
+UserName:quis
+GE5LNSaslzXiaCP9GHfhmgulBrXtWT7x
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:24 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.547 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.715 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.991 ms - 24[0m
+UserName:jadmin 
+6CMzhq1RynG4l7l9XGqSygoTHzl5ONn7
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:24 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.369 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.968 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.112 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.163 ms - 23[0m
+Connected to DB as :438
+FirstnameKennan
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.104 ms - 32[0m
+UserName:mattis
+Dl1ncwqvotjie6CVZcNmX9M90AUBCha0
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:25 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m1.961 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m1.675 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.777 ms - 24[0m
+UserName:jadmin 
+_vkUgAbvQ0OhBA3VuScCBVyIdxyL8bbM
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:25 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.129 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m1.984 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.085 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m9.567 ms - 23[0m
+Connected to DB as :440
+FirstnameKarina
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m3.990 ms - 32[0m
+UserName:ultrices,
+YUCzhugz-iXMSfqYPES2LW0PtwBpQxJM
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:25 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.694 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.907 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.604 ms - 24[0m
+UserName:jadmin 
+CCltcUkHZxjdA2dls1oxycHzFDwRPTnp
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:25 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.048 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.119 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m2.130 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.133 ms - 23[0m
+Connected to DB as :442
+FirstnameWarren
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.808 ms - 32[0m
+UserName:ipsum
+VPGv2SBmtu6xO6oQHZOWlxyCiCY1jKJC
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:26 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m2.271 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m0.907 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.961 ms - 24[0m
+UserName:jadmin 
+zdH9slFOmTjihHQRNcIPF9kxJD-CUdsK
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:26 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.126 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m2.355 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m1.829 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.894 ms - 23[0m
+Connected to DB as :444
+FirstnameWing
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.558 ms - 32[0m
+UserName:diam
+quYWcOxbh2ff2f5raYr55T5dUrevJ7-O
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:26 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.134 ms - 12[0m
+[0mPOST /viewUsers [32m200 [0m2.447 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.230 ms - 24[0m
+UserName:jadmin 
+Hgljpfv-fZ9bOfM7sXFijcwh2bQfPg56
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:26 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.407 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m8.117 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m7.732 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.416 ms - 23[0m
+Connected to DB as :446
+FirstnameIsaac
+Record:object
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry 'Duis' for key 'username'
+[0mPOST /registerUser [32m200 [0m7.439 ms - 42[0m
+UserName:Duis
+[0mPOST /login [32m200 [0m4.799 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m1.863 ms - 44[0m
+[0mPOST /logout [32m200 [0m1.016 ms - 31[0m
+UserName:jadmin 
+pRIV8eJR8l0M_k0vO1w5sXe29o8OBqqu
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:27 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m6.373 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m4.864 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.785 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.160 ms - 23[0m
+Connected to DB as :448
+FirstnameSheila
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m8.540 ms - 32[0m
+UserName:vitae
+A0cC5_5om2oX1xo_99S3RN4nmZmzwe9p
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:27 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.624 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m1.359 ms - 34[0m
+[0mPOST /logout [32m200 [0m0.910 ms - 24[0m
+UserName:jadmin 
+W06DZhuQAYq_MeJor-MMQaqfYHLweE-i
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:27 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m8.347 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m7.386 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.132 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.966 ms - 23[0m
+Connected to DB as :450
+FirstnameStephen
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m10.922 ms - 32[0m
+UserName:vulputate
+U5s5wwvrwGszi7ofWXWOpfc3CSTaHEZg
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:28 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m10.159 ms - 15[0m
+[0mPOST /viewUsers [32m200 [0m2.683 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.999 ms - 24[0m
+UserName:jadmin 
+P9m-HczfXYDpEdvXqptE7NHOsb5kAKdg
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:28 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m10.065 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m5.470 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m8.901 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.382 ms - 23[0m
+Connected to DB as :452
+FirstnamePortia
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.436 ms - 32[0m
+UserName:et,
+_1816nDVeaQsIs6FGEmhJkCtQNyAEbkG
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:28 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.360 ms - 14[0m
+[0mPOST /viewUsers [32m200 [0m2.739 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.902 ms - 24[0m
+UserName:jadmin 
+HujYavUAlb4mVUjIx7WflxOGcsa9VIUA
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:28 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.872 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m10.285 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m13.467 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.208 ms - 23[0m
+Connected to DB as :454
+FirstnameChanning
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.372 ms - 32[0m
+UserName:egestas.
+BRNn8EUHr9yQMDglKDZnO2eNWjR_a-wr
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:29 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.466 ms - 16[0m
+[0mPOST /viewUsers [32m200 [0m2.048 ms - 34[0m
+[0mPOST /logout [32m200 [0m2.006 ms - 24[0m
+UserName:jadmin 
+IiINNvpWGQHfjE7pTmqOMNeTd0Qg9Ktb
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:29 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m14.058 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m8.809 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m8.671 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.599 ms - 23[0m
+Connected to DB as :456
+FirstnameChristen
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.734 ms - 32[0m
+UserName:Aliquam
+of0mffMo7daSYVjC2fF523Lqh2dcUkeQ
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:29 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.160 ms - 16[0m
+[0mPOST /viewUsers [32m200 [0m2.752 ms - 34[0m
+[0mPOST /logout [32m200 [0m3.124 ms - 24[0m
+UserName:jadmin 
+T5r_9aLl2RQZ-TqG41uZYIQc4S9LkUyL
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:29 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.757 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m5.099 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m4.066 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.266 ms - 23[0m
+Connected to DB as :458
+FirstnameJana
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.714 ms - 32[0m
+UserName:magna.
+AkmzuqnZyTZqEQ3I7FnexLlYaGruqnVo
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:30 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.646 ms - 12[0m
+[0mPOST /viewUsers [32m200 [0m1.461 ms - 34[0m
+[0mPOST /logout [32m200 [0m2.602 ms - 24[0m
+UserName:jadmin 
+d8NCGvWdvhYKGwxUnWUMixad8TcQICVG
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:30 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.700 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m7.952 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m3.829 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m7.659 ms - 23[0m
+Connected to DB as :460
+FirstnameOcean
+Record:object
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry 'Donec' for key 'username'
+[0mPOST /registerUser [32m200 [0m8.273 ms - 42[0m
+UserName:Donec
+[0mPOST /login [32m200 [0m4.024 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m2.560 ms - 44[0m
+[0mPOST /logout [32m200 [0m0.711 ms - 31[0m
+UserName:jadmin 
+A2LhzQ4FX6w3pqcWIFTE15tiIp67lgVj
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:30 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.076 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m6.943 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.943 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.372 ms - 23[0m
+Connected to DB as :462
+FirstnameRinah
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.860 ms - 32[0m
+UserName:ipsum.
+aP9lOrr2k-5jlnSacsTtRa-t5sG77R4T
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:31 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.932 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m1.368 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.210 ms - 24[0m
+UserName:jadmin 
+M8OprKw4aXneDCMtr4F3yCaDawRGlvc1
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:31 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.408 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m3.786 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.335 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.066 ms - 23[0m
+Connected to DB as :464
+FirstnameTeagan
+Record:object
+Error while persisting recordError: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xEF\xBF\xBD de...' for column 'city' at row 1
+[0mPOST /registerUser [32m200 [0m5.657 ms - 42[0m
+UserName:lorem,
+[0mPOST /login [32m200 [0m3.591 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m1.306 ms - 44[0m
+[0mPOST /logout [32m200 [0m2.434 ms - 31[0m
+UserName:jadmin 
+Ro4Yrt0byGs2dPchZwuwdvXpfBGbFbIK
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:31 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.266 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m4.174 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m6.894 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m3.959 ms - 23[0m
+Connected to DB as :466
+FirstnameTarik
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.660 ms - 32[0m
+UserName:condimentum
+CYnjBho0DOO95b_3UyG1zu-8TxMtLKSG
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:32 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.654 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.801 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.296 ms - 24[0m
+UserName:jadmin 
+PvTGkwJObZ9fw8cQiy9b-x99LeSCqHwK
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:32 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.635 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m9.476 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.725 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m6.414 ms - 23[0m
+Connected to DB as :468
+FirstnameYen
+Record:object
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry 'lacus.' for key 'username'
+[0mPOST /registerUser [32m200 [0m7.096 ms - 42[0m
+UserName:lacus.
+[0mPOST /login [32m200 [0m3.814 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m1.226 ms - 44[0m
+[0mPOST /logout [32m200 [0m0.863 ms - 31[0m
+UserName:jadmin 
+6lhFA7R5_d-CWmIgfH9tit4t0QKEQY96
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:32 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.698 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m6.853 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m6.286 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m3.630 ms - 23[0m
+Connected to DB as :470
+FirstnameCooper
+Record:object
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry 'mauris.' for key 'username'
+[0mPOST /registerUser [32m200 [0m9.930 ms - 42[0m
+UserName:mauris.
+[0mPOST /login [32m200 [0m3.491 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m0.738 ms - 44[0m
+[0mPOST /logout [32m200 [0m0.589 ms - 31[0m
+UserName:jadmin 
+fyiINaHCezqnBmdJx_qQZYorv-h32dwz
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:33 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.038 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m6.108 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m7.378 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.840 ms - 23[0m
+Connected to DB as :472
+FirstnameAudra
+Record:object
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry 'sagittis' for key 'username'
+[0mPOST /registerUser [32m200 [0m6.925 ms - 42[0m
+UserName:sagittis
+[0mPOST /login [32m200 [0m4.473 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m0.923 ms - 44[0m
+[0mPOST /logout [32m200 [0m1.771 ms - 31[0m
+UserName:jadmin 
+kkoZS6SwzPDjiJHYmfFl2vOMHCXSBZj_
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:33 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.464 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m5.255 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m6.461 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.414 ms - 23[0m
+Connected to DB as :474
+FirstnameEugenia
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.398 ms - 32[0m
+UserName:at
+tkvfnzY_tFQAwBe8yeq8H-JYu1kgtLfd
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:34 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m6.146 ms - 15[0m
+[0mPOST /viewUsers [32m200 [0m1.175 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.053 ms - 24[0m
+UserName:jadmin 
+A-8UPitObi8HjhTyh0Zm4TX5zpuDg6dc
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:34 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.050 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m8.446 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m6.689 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.056 ms - 23[0m
+Connected to DB as :476
+FirstnameDante
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m6.864 ms - 32[0m
+UserName:semper
+pc-zh4mxYwq7KF_bvcaePWOLT2hVlplM
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:34 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.442 ms - 13[0m
+[0mPOST /viewUsers [32m200 [0m0.758 ms - 34[0m
+[0mPOST /logout [32m200 [0m2.069 ms - 24[0m
+UserName:jadmin 
+wiK928-cKryh80ItR7Ao6vS_ekqBzAgL
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:34 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m6.214 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m8.905 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m6.997 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m4.368 ms - 23[0m
+Connected to DB as :478
+FirstnameOri
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.995 ms - 32[0m
+UserName:Nulla
+dev029aw4QwZlbA8zNPOiSELVA2auz9B
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:35 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.354 ms - 11[0m
+[0mPOST /viewUsers [32m200 [0m0.778 ms - 34[0m
+[0mPOST /logout [32m200 [0m1.153 ms - 24[0m
+UserName:jadmin 
+T9U7LUP4YVuQmf3kHqRHBq558Ejf2-IH
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:35 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.238 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m7.337 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m4.672 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m5.697 ms - 23[0m
+Connected to DB as :480
+FirstnameKaryn
+Record:object
+Error while persisting recordError: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xEF\xBF\xBDari' for column 'city' at row 1
+[0mPOST /registerUser [32m200 [0m8.544 ms - 42[0m
+UserName:erat,
+[0mPOST /login [32m200 [0m4.397 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m1.141 ms - 44[0m
+[0mPOST /logout [32m200 [0m0.903 ms - 31[0m
+UserName:jadmin 
+CB6gZ7k8LBoaDM-uweAczJJa1Dox1tpP
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:35 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m5.197 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m7.138 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.492 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m7.251 ms - 23[0m
+Connected to DB as :482
+FirstnameValentine
+Record:object
+Registered successfully
+[0mPOST /registerUser [32m200 [0m7.764 ms - 32[0m
+UserName:quis,
+K24j2q3krtlW-yH5WFF1HR_tjW3yKIeh
+Req Admin0
+ Created session:Fri Jun 10 2016 19:18:36 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m3.436 ms - 17[0m
+[0mPOST /viewUsers [32m200 [0m1.315 ms - 34[0m
+[0mPOST /logout [32m200 [0m2.279 ms - 24[0m
+UserName:jadmin 
+8NrPC3eTJ9zC58IzwchyjPtjMDLZzvsl
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:36 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m6.258 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m5.993 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m5.563 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m7.583 ms - 23[0m
+Connected to DB as :484
+FirstnameZenia
+Record:object
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry 'sem' for key 'username'
+[0mPOST /registerUser [32m200 [0m8.244 ms - 42[0m
+UserName:sem
+[0mPOST /login [32m200 [0m3.905 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m1.630 ms - 44[0m
+[0mPOST /logout [32m200 [0m2.136 ms - 31[0m
+UserName:jadmin 
+ElHftbq5miHdxDHI_8D3pJA4pnh2e5gW
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:36 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m4.964 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m4.936 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m7.185 ms - 23[0m
+[0mPOST /viewProducts [32m200 [0m9.911 ms - 23[0m
+Connected to DB as :486
+FirstnameByron
+Record:object
+Error while persisting recordError: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xEF\xBF\xBDs-R...' for column 'city' at row 1
+[0mPOST /registerUser [32m200 [0m15.480 ms - 42[0m
+UserName:elit.
+[0mPOST /login [32m200 [0m5.006 ms - 82[0m
+[0mPOST /viewUsers [32m200 [0m0.855 ms - 44[0m
+[0mPOST /logout [32m200 [0m1.052 ms - 31[0m
+UserName:jadmin 
+mJERf5IT08psES2rhgRf1Wrap5Qngzbi
+Req Admin1
+ Created session:Fri Jun 10 2016 19:18:37 GMT-0400 (EDT)
+[0mPOST /login [32m200 [0m6.550 ms - 13[0m
+Req session:[object Object]
+Req admin:1
+Error while persisting recordError: ER_DUP_ENTRY: Duplicate entry '3' for key 'PRIMARY'
+[0mPOST /addProducts [32m200 [0m7.227 ms - 36[0m
+[0mPOST /viewProducts [32m200 [0m8.111 ms - 23[0m

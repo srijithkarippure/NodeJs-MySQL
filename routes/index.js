@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var validator = require("email-validator");
+//var validator = require("email-validator");
 
 
 
@@ -17,7 +17,7 @@ var validator = require("email-validator");
 router.post('/logout',function(req,res,next){
   if(req.session && req.session.username){
 	req.session.destroy();
-  res.send('{message: You have been successfully logged out}');
+  res.send('You have been logged out');
 }
 else{
   res.send('You are not currently logged in');
@@ -56,7 +56,7 @@ var username = req.body.username;
 var password = req.body.password;
 console.log('UserName:' + username);
 conn.query('SELECT firstname,password,role from USERS where username=?',username, function(err, rows, fields) {
-  
+  conn.release();
   if (!err){
   	if(rows.length != 1){
   		res.send('There seems to be an issue with the username/password combination that you entered');
@@ -67,7 +67,10 @@ conn.query('SELECT firstname,password,role from USERS where username=?',username
 
       if(req.session && req.session.username === username){
         console.log('User:' + username + ' already logged in. Killing session:' + req.session.sessionId);
-        req.session.regenerate();
+        req.session.regenerate(function(err){
+          req.session.username = username;
+        });
+        
       }
       console.log( req.sessionID);
       var expiryTime =  15 * 60 * 1000; 
@@ -86,7 +89,7 @@ conn.query('SELECT firstname,password,role from USERS where username=?',username
  else{
       console.log('Error while performing query');
     }
-    conn.release();
+    
 });
 });
 }
@@ -104,13 +107,13 @@ router.get('/', function(req, res, next) {
   res.send('{Message: Lets get going }');
 });
 
-/*router.get('/login',function(req,res){
+router.get('/login',function(req,res){
   res.render('login');
 });
 
 router.get('/register',function(req,res){
   res.render('register');
-});*/
+});
 
 router.post('/registerUser', validateRegister, function(req,res,next){
  connectionPool.getConnection(function(err,conn){
@@ -120,12 +123,13 @@ router.post('/registerUser', validateRegister, function(req,res,next){
     return;
   }
   console.log('Connected to DB as :' + conn.threadId);
-  console.log('Firstname' + req.body.fname);
+  console.log('Register UserName' + req.body.username);
   var record = {firstname: req.body.fname , lastname: req.body.lname, address: req.body.address, city: req.body.city, state: req.body.state,
     zip: req.body.zip, email: req.body.email, username: req.body.username, password: req.body.password};
 
-    console.log('Record:' + typeof record);
+    //console.log('Record:' + typeof record);
   conn.query('INSERT INTO USERS SET ?', record, function(err){
+    conn.release();
     if(err){
       console.log('Error while persisting record' + err);
       res.send('There was a problem with your registration');
@@ -134,8 +138,9 @@ router.post('/registerUser', validateRegister, function(req,res,next){
       console.log('Registered successfully');
       res.send('Your account has been registered');
     }
-    conn.release();
-  })
+    
+  });
+  
 
  })
 
@@ -143,7 +148,7 @@ router.post('/registerUser', validateRegister, function(req,res,next){
 
 router.post('/updateInfo', function(req,res,next){
   if(req.session && req.session.username){
-   var record = '{';
+
     console.log('First:' + req.body.firstname);
     if(typeof req.body.fname === 'undefined'){
      // record = record + 'firstname:'+ req.body.firstname + ',';
@@ -198,6 +203,7 @@ connectionPool.getConnection(function(err,conn){
     console.log('Error in getting connection from pool');
     return;
   }
+    console.log('Connected to DB as :' + conn.threadId);
   conn.changeUser({database : 'CREDENTIALS'}, function(err) {
   if (err) console.log('Error while changing database');
 });
@@ -205,6 +211,7 @@ connectionPool.getConnection(function(err,conn){
   console.log(req.body.username);
   conn.query('UPDATE USERS SET firstname = IfNULL(?,firstname), lastname = IfNULL(?, lastname), address = IfNULL(?, address), state = IfNULL(?, state), city = IfNULL(?, city), zip = IfNULL(?, zip),'
     +' email = IfNULL(?, email), username = IfNULL(?, username), password = IfNULL(?, password) where username=?', [req.body.fname,req.body.lname,req.body.address,req.body.state,req.body.city,req.body.zip,req.body.email,req.body.username,req.body.password,req.session.username], function(err){
+    conn.release();
     if(err){
       console.log('Error while persisting record' + err);
       res.send('There was a problem with this action');
@@ -217,8 +224,9 @@ connectionPool.getConnection(function(err,conn){
       res.send('Your information has been updated');
 
     }
-    conn.release();
-  })
+    
+  });
+
 })
 }
 else{
@@ -227,8 +235,8 @@ else{
 });
 
 router.post('/addProducts',function(req,res,next){
-  console.log('Req session:' + req.session);
-  console.log('Req admin:' + req.session.admin);
+  //console.log('Req session:' + req.session);
+  //console.log('Req admin:' + req.session.admin);
   if(req.session && req.session.admin == 1){
     if(req.body.productId === '' || typeof req.body.productId === 'undefined' || req.body.name === '' || typeof req.body.name ==='undefined' || req.body.productDescription === '' || typeof req.body.productDescription ==='undefined' || req.body.group === '' || typeof req.body.group ==='undefined'){
     console.log('All parameters required');
@@ -247,6 +255,8 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
 });
   conn.query('INSERT INTO PRODUCTS SET ?', product_info, function(err) {
   //conn.query('INSERT INTO PRODUCTS (productId, `name`, productDescription, `group`) values (?,?,?,?)', [req.body.productId,req.body.name,req.body.productDescription,req.body.group], function(err){
+       conn.release();
+
     if(err){
       console.log('Error while persisting record' + err);
       res.send('There was a problem with this action');
@@ -255,7 +265,6 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
       //console.log('Registered successfully');
       res.send('The product has been added to the system');
     }
-    conn.release();
     });
 });
   }
@@ -274,8 +283,9 @@ router.post('/viewProducts', function(req,res,next){
     console.log('Error in getting connection from pool');
     return;
   }
+  console.log('ConnectionID:' + conn.threadId);
   var executer='';
-  if(typeof req.body.productId === 'undefined' && typeof req.body.group ==='undefined' && typeof req.body.productDescription === 'undefined' && typeof req.body.name ==='undefined'){
+  if(typeof req.body.productId === 'undefined' && typeof req.body.group ==='undefined' && typeof req.body.keyword === 'undefined'){
     executer = 'select name from products';
   }
   else{
@@ -289,14 +299,10 @@ router.post('/viewProducts', function(req,res,next){
     //req.body.group = null;
     executer += ' `group` = '+ conn.escape(req.body.group)+' or';
   }
-  if(typeof req.body.productDescription !== 'undefined'){
+  if(typeof req.body.keyword !== 'undefined'){
 
-    var description = '%' + req.body.productDescription + '%';
-      executer += ' productDescription like '+conn.escape(description)+' or';
-  }
-  if(typeof req.body.name !== 'undefined'){
-    var productName = '%' + req.body.name + '%';
-    executer += ' name like '+conn.escape(productName)+' or';
+    var description = '%' + req.body.keyword + '%';
+      executer += ' productDescription like '+conn.escape(description)+' or name like '+conn.escape(description)+' or';
   }
   executer = executer.slice(0,-2);
   }
@@ -305,11 +311,12 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
 });
 //console.log(executer);
 conn.query(executer, function(err,results){
+      conn.release();
 if(!err){
   if(results.length > 0){
-    var userList = [results[0].name];
+    var userList = ['name:' + results[0].name];
     for (var i =1 ; i < results.length; i++) {
-      userList.push(results[i].name);
+      userList.push('name:' + results[i].name);
     }
     res.send(userList);
   }
@@ -356,6 +363,7 @@ else{
 }
 console.log(executer);
 conn.query(executer,function(err,results){
+      conn.release();
 if(!err){
   if(results.length > 0){
     var userList = [];
@@ -381,27 +389,12 @@ else if(req.session && req.session.admin == 0){
 else{
   res.send('You must be logged in to perform this action');
 }
-
-  
- /* if(req.body.productId=== 'undefined' || req.body.productId === ''){
-    req.body.productId = null;
-  }
-  if(req.body.productDescription=== 'undefined' || req.body.productDescription === ''){
-    req.body.productDescription = null;
-  }
-  if(req.body.name=== 'undefined' || req.body.name === ''){
-    req.body.name = null;
-  }*/
-
-
-
-
 }) ;
 
 router.post('/modifyProduct', function(req,res,next){
 
   if(req.session && req.session.admin ==1) {
-  if(req.body.name === 'undefined' || req.body.name === '' || req.body.productDescription === 'undefined' || req.body.productDescription ===''|| req.body.productId === 'undefined' || req.body.productId === ''){
+  if(typeof req.body.name === 'undefined' || typeof req.body.productDescription === 'undefined' ||typeof req.body.productId === 'undefined'){
     console.log('In validation');
     res.send('There was a problem with this action');
     return;
@@ -417,7 +410,8 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
 });
 //var record = {name:req.body.name, productDescription: req.body.productDescription};
 console.log('Executing Update' + req.body.name + ' ' + req.body.productDescription + '  ' + req.body.productId);
-conn.query('update `products` set `name` = ?, `productDescription` = ? where `productId` = ?' ,[req.body.name, req.body.productDescription, req.body.productId], function(err){
+conn.query('update `products` set `productDescription` = ?,`name` = ? where `productId` = ?' ,[req.body.productDescription, req.body.name, req.body.productId], function(err){
+    conn.release();
 if(!err){
 
   res.send('The product information has been updated');
@@ -449,9 +443,9 @@ function validateRegister(req,res,next){
     return;
   }
 
- else if(typeof req.body.fname === '' || typeof req.body.lname === '' ||typeof req.body.address === '' || 
-    typeof req.body.city === '' ||typeof req.body.zip === '' || typeof req.body.email === '' ||
-    typeof req.body.username === '' ||typeof req.body.password === ''){
+ else if( req.body.fname === '' ||  req.body.lname === '' || req.body.address === '' || 
+     req.body.city === '' || req.body.zip === '' ||  req.body.email === '' ||
+     req.body.username === '' || req.body.password === ''){
     console.log('In validateRegister');
 
     res.send('There was a problem with your registration');
@@ -475,13 +469,5 @@ function validateRegister(req,res,next){
 }
 
 
-/*function validateProduct(req,res,next){
-  console.log('In validatproduct');
-  console.log('Id:' + typeof req.body.productId);
-  
-  else{
-    next();
-  }
-}*/
 
 module.exports = router;
