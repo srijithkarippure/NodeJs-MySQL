@@ -368,7 +368,7 @@ if(!err){
   if(results.length > 0){
     var userList = [];
     for (var i =0 ; i < results.length; i++) {
-      userList.push(results[i].firstname + ' ' + results[i].lastname);
+      userList.push('{fname:' + results[i].firstname + ',lname:' + results[i].lastname + '}');
     }
     res.send(userList);
   }
