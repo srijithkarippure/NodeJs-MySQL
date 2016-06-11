@@ -122,6 +122,9 @@ router.post('/registerUser', validateRegister, function(req,res,next){
     console.log('Error in getting connection from pool');
     return;
   }
+  conn.changeUser({database : 'CREDENTIALS'}, function(err) {
+  if (err) console.log('Error while changing db');
+});
   console.log('Connected to DB as :' + conn.threadId);
   console.log('Register UserName' + req.body.username);
   var record = {firstname: req.body.fname , lastname: req.body.lname, address: req.body.address, city: req.body.city, state: req.body.state,
@@ -290,7 +293,7 @@ router.post('/viewProducts', function(req,res,next){
   }
   else{
 
-   executer = 'select name from products where ';
+   executer = 'select name from PRODUCTS where ';
    if(typeof req.body.productId !== 'undefined'){
     //req.body.productId = null;
     executer += 'productId = '+ conn.escape(req.body.productId)+' or';
@@ -350,7 +353,7 @@ if(typeof req.body.fname === 'undefined' && typeof req.body.lname === 'undefined
   executer = 'select firstname,lastname from users';
 }
 else{
-    executer = 'select firstname,lastname from users where';
+    executer = 'select firstname,lastname from USERS where';
   if(typeof req.body.fname !== 'undefined'){
     var fname = '%' + req.body.fname + '%';
     executer += ' firstname like '+conn.escape(fname)+' or';
@@ -410,7 +413,7 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
 });
 //var record = {name:req.body.name, productDescription: req.body.productDescription};
 console.log('Executing Update' + req.body.name + ' ' + req.body.productDescription + '  ' + req.body.productId);
-conn.query('update `products` set `productDescription` = ?,`name` = ? where `productId` = ?' ,[req.body.productDescription, req.body.name, req.body.productId], function(err){
+conn.query('update `PRODUCTS` set `productDescription` = ?,`name` = ? where `productId` = ?' ,[req.body.productDescription, req.body.name, req.body.productId], function(err){
     conn.release();
 if(!err){
 
