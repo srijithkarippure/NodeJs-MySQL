@@ -28,20 +28,6 @@ router.post('/login',function(req,res,next){
 
 	
 try{
-/*var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'password',
-  database : 'CREDENTIALS'
-});
-connection.connect(function(err){
-  if(!err){
-    console.log("Database Connected");
-  }
-  else{
-    console.log("Issue with db connection");
-  }
-});*/
 connectionPool.getConnection(function(err,conn){
   if(err){
     conn.release();
@@ -65,21 +51,29 @@ conn.query('SELECT firstname,password,role from USERS where username=?',username
   	if(rows[0].password === password) {
       var firstName = rows[0].firstname;
 
-      if(req.session && req.session.username === username){
-        console.log('User:' + username + ' already logged in. Killing session:' + req.session.sessionId);
-        req.session.regenerate(function(err){
-          req.session.username = username;
+      //if(req.session && req.session.username === username){
+        if(req.session && req.session.username === username){
+          console.log('Fetching SESSION USERNAME FROM REDIS:' + req.session.username);
+          console.log('User:' + username + ' already logged in. Killing session:' + req.sessionID);
+          req.session.regenerate(function(err){
+            console.log('SessionID after Regenerate:' + req.sessionID);
+            req.session.username = username;
+            req.session.admin = rows[0].role;
+            res.send( 'Welcome ' + firstName);
+
         });
-        
       }
-      console.log( req.sessionID);
-      var expiryTime =  15 * 60 * 1000; 
-      req.session.cookie.expires = new Date(Date.now() + expiryTime);
+      else{
+      //var expiryTime =  15 * 60 * 1000; 
+      //req.session.cookie.expires = new Date(Date.now() + expiryTime);
   		req.session.username = username;
       req.session.admin = rows[0].role;
-      console.log('Req Admin' + req.session.admin);
-      console.log(' Created session:' + req.session.cookie.expires);
-		  res.send( 'Welcome ' + firstName);
+      console.log( 'Initial SessionID:' + req.sessionID);
+      res.send( 'Welcome ' + firstName);
+    }
+      //console.log('Req Admin role:' + req.session.admin);
+      //console.log(' Created session:' + req.session.cookie.expires);
+		  //res.send( 'Welcome ' + firstName);
     }
     else{
       res.send('There seems to be an issue with the username/password combination that you entered');
@@ -104,7 +98,7 @@ catch(e){
 
 
 router.get('/', function(req, res, next) {
-  res.send('{Message: Lets get going }');
+  res.status(200).send('{Message: Lets get going }');
 });
 
 router.get('/login',function(req,res){
@@ -135,7 +129,7 @@ router.post('/registerUser', validateRegister, function(req,res,next){
     conn.release();
     if(err){
       console.log('Error while persisting record' + err);
-      res.send('There was a problem with your registration');
+      res.send('There was a problem with this action');
     }
     else{
       console.log('Registered successfully');
@@ -251,6 +245,7 @@ router.post('/addProducts',function(req,res,next){
   if(err){
     conn.release();
     console.log('Error in getting connection from pool');
+    res.send('There was a problem with this action');
     return;
   }
 conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
@@ -317,11 +312,11 @@ conn.query(executer, function(err,results){
       conn.release();
 if(!err){
   if(results.length > 0){
-    var userList = ['name:' + results[0].name];
+    var productList = ['name:' + results[0].name];
     for (var i =1 ; i < results.length; i++) {
-      userList.push('name:' + results[i].name);
+      productList.push('name:' + results[i].name);
     }
-    res.send(userList);
+    res.send(productList);
   }
   else{
     res.send('There were no products in the system that met that criteria');
@@ -368,16 +363,16 @@ console.log(executer);
 conn.query(executer,function(err,results){
       conn.release();
 if(!err){
-  if(results.length > 0){
+  // if(results.length > 0){
     var userList = [];
     for (var i =0 ; i < results.length; i++) {
       userList.push('{fname:' + results[i].firstname + ',lname:' + results[i].lastname + '}');
     }
     res.send(userList);
-  }
-  else{
-    res.send('There are no users matching your search criteria');
-  }
+  //}
+  //else{
+    //res.send('There are no users matching your search criteria');
+  //}
 }
 else{
   console.log(err);
@@ -441,11 +436,9 @@ function validateRegister(req,res,next){
     typeof req.body.city === 'undefined' ||typeof req.body.zip === 'undefined' || typeof req.body.email === 'undefined' ||
     typeof req.body.username === 'undefined' ||typeof req.body.password === 'undefined'){
     console.log('In validateRegister');
-
     res.send('There was a problem with your registration');
     return;
   }
-
  else if( req.body.fname === '' ||  req.body.lname === '' || req.body.address === '' || 
      req.body.city === '' || req.body.zip === '' ||  req.body.email === '' ||
      req.body.username === '' || req.body.password === ''){
@@ -454,18 +447,6 @@ function validateRegister(req,res,next){
     res.send('There was a problem with your registration');
     return;
   }
-  /*else if( isNaN(req.body.zip) || req.body.zip.length != 5 || req.body.state.length<2){
-        console.log('In zip code and state');
-
-    res.send('There was a problem with your registration');
-    return;
-  }
-  else if(!validator.validate(req.body.email)){
-        console.log('In email');
-
-    res.send('There was a problem with your registration');
-    return;
-  }*/
   else{
     next();
   }

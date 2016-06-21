@@ -1,14 +1,15 @@
 var express = require('express');
+var redis   = require('redis');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var redisStore = require('connect-redis')(session);
+var client  = redis.createClient();
 var routes = require('./routes/index');
 var users = require('./routes/users');
-//var register = require('./routes/register');
-//var welcome = require('./routes/welcome');
 
 var app = express();
 
@@ -24,8 +25,17 @@ app.set('view engine', 'hjs');
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(session({ 
-  cookieName: 'session',
+  cookie: {
+        expires: new Date(Date.now() + (15 * 60 * 1000)),
+        maxAge: 30 * 60 * 1000
+    },
   secret: 'something', 
+  store: new redisStore({
+    host:'localhost',
+    port: 6379,
+    client: client,
+    ttl: 900
+  }),
   resave: false, saveUninitialized: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
