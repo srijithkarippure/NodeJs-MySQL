@@ -7,10 +7,11 @@ var mysql = require('mysql');
 
   var connectionPool =  mysql.createPool({
     connectionLimit: 500,
-  host : 'localhost',
+  host : 'project-4-test.ced97emddlua.us-east-1.rds.amazonaws.com',
   user : 'root',
   password: 'password',
-  database : 'CREDENTIALS'
+  database : 'CREDENTIALS',
+  port: 3306
   });
 
 
@@ -187,13 +188,7 @@ req.body.zip = null;
       req.body.password = null;
 //record = record + 'password:' + req.body.password + ',';      //console.log('Record:' + record);
     }
-    //record = record.slice(0,-1);
-    //record = record + '}';
-    //eval('var obj='+record);
-    /*var jsonRecord = JSON.parse(JSON.stringify(record));
-    console.log('Final Record:' + jsonRecord);
-    console.log(typeof jsonRecord);*/
-    //console.log('Final record:' + record);
+
 connectionPool.getConnection(function(err,conn){
   if(err){
     conn.release();
@@ -235,12 +230,12 @@ router.post('/addProducts',function(req,res,next){
   //console.log('Req session:' + req.session);
   //console.log('Req admin:' + req.session.admin);
   if(req.session && req.session.admin == 1){
-    if(req.body.productId === '' || typeof req.body.productId === 'undefined' || req.body.name === '' || typeof req.body.name ==='undefined' || req.body.productDescription === '' || typeof req.body.productDescription ==='undefined' || req.body.group === '' || typeof req.body.group ==='undefined'){
+    if(req.body.asin === '' || typeof req.body.asin === 'undefined' || req.body.name === '' || typeof req.body.name ==='undefined' || req.body.productDescription === '' || typeof req.body.productDescription ==='undefined' || req.body.group === '' || typeof req.body.group ==='undefined'){
     console.log('All parameters required');
     res.send('There was a problem with this action');
     return;
   }
-    var product_info = {productId: req.body.productId, name: req.body.name, productDescription: req.body.productDescription, group: req.body.group};
+    var product_info = {asin: req.body.asin, name: req.body.name, productDescription: req.body.productDescription, group: req.body.group};
       connectionPool.getConnection(function(err,conn){
   if(err){
     conn.release();
@@ -283,31 +278,45 @@ router.post('/viewProducts', function(req,res,next){
   }
   console.log('ConnectionID:' + conn.threadId);
   var executer='';
-  if(typeof req.body.productId === 'undefined' && typeof req.body.group ==='undefined' && typeof req.body.keyword === 'undefined'){
+  if(typeof req.body.asin === 'undefined' && typeof req.body.group ==='undefined' && typeof req.body.keyword === 'undefined'){
     executer = 'select name from PRODUCTS';
   }
   else{
 
    executer = 'select name from PRODUCTS where ';
-   if(typeof req.body.productId !== 'undefined'){
+   if(typeof req.body.asin !== 'undefined'){
     //req.body.productId = null;
-    executer += 'productId = '+ conn.escape(req.body.productId)+' or';
+    executer += 'asin = '+ conn.escape(req.body.asin)+' and';
   }
    if(typeof req.body.group !== 'undefined'){
     //req.body.group = null;
-    executer += ' `group` = '+ conn.escape(req.body.group)+' or';
+    executer += ' `group` = '+ conn.escape(req.body.group)+' and';
   }
   if(typeof req.body.keyword !== 'undefined'){
+    var word = req.body.keyword;
+    var numberOfWords = req.body.keyword.split(" ");
+    if(numberOfWords.length > 1){
+      console.log(word);
+        if(word.charAt(0) !== '\"'){
 
-    var description = '%' + req.body.keyword + '%';
-      executer += ' productDescription like '+conn.escape(description)+' or name like '+conn.escape(description)+' or';
+
+        req.body.keyword = "\"" + req.body.keyword + "\"";
+        }
+    }
+    else{
+      req.body.keyword = req.body.keyword + "*";
+    }
+    //var description = '%' + req.body.keyword + '%';
+      //executer += ' productDescription like '+conn.escape(description)+' or name like '+conn.escape(description)+' or';
+    executer += ' match(name,productDescription) against ('+ conn.escape(req.body.keyword) +'IN BOOLEAN MODE) and';
   }
-  executer = executer.slice(0,-2);
+  executer = executer.slice(0,-3);
+  executer += 'limit 1000';
   }
 conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
   if (err) console.log(err);
 });
-//console.log(executer);
+console.log(executer);
 conn.query(executer, function(err,results){
       conn.release();
 if(!err){
@@ -392,7 +401,7 @@ else{
 router.post('/modifyProduct', function(req,res,next){
 
   if(req.session && req.session.admin ==1) {
-  if(typeof req.body.name === 'undefined' || typeof req.body.productDescription === 'undefined' ||typeof req.body.productId === 'undefined'){
+  if(typeof req.body.name === 'undefined' || typeof req.body.productDescription === 'undefined' ||typeof req.body.asin === 'undefined'){
     console.log('In validation');
     res.send('There was a problem with this action');
     return;
@@ -407,8 +416,8 @@ conn.changeUser({database : 'PRODUCT_INFO'}, function(err) {
   if (err) console.log(err);
 });
 //var record = {name:req.body.name, productDescription: req.body.productDescription};
-console.log('Executing Update' + req.body.name + ' ' + req.body.productDescription + '  ' + req.body.productId);
-conn.query('update `PRODUCTS` set `productDescription` = ?,`name` = ? where `productId` = ?' ,[req.body.productDescription, req.body.name, req.body.productId], function(err){
+console.log('Executing Update' + req.body.name + ' ' + req.body.productDescription + '  ' + req.body.asin);
+conn.query('update `PRODUCTS` set `productDescription` = ?,`name` = ? where `asin` = ?' ,[req.body.productDescription, req.body.name, req.body.asin], function(err){
     conn.release();
 if(!err){
 
